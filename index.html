@@ -3,8 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Rock Paper Scissors</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Rock Paper Scissors with CSS</h1>
+    <form>
+      <input type="radio" name="rps" id="rock" />
+      <input type="radio" name="rps" id="paper" />
+      <input type="radio" name="rps" id="scissors" />
+
+      <div id="game" class="game">
+        <div>
+          <h2>You</h2>
+          <div id="your-choice"></div>
+        </div>
+
+        <div>Vs</div>
+
+        <div>
+          <h2>Computer</h2>
+          <div id="computer-choice"></div>
+        </div>
+      </div>
+
+      <div id="choices">
+        <p>Pick an option</p>
+        <label for="rock">✊</label>
+        <label for="paper">🖐️</label>
+        <label for="scissors">✌️</label>
+      </div>
+
+      <button type="reset">Play again</button>
+    </form>
+  </body>
 </html>
