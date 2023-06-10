@@ -9,9 +9,15 @@
   <body>
     <h1>Rock Paper Scissors with CSS</h1>
     <form>
-      <input type="radio" name="rps" id="rock" />
-      <input type="radio" name="rps" id="paper" />
-      <input type="radio" name="rps" id="scissors" />
+      <input type="radio" name="rps" id="rock-rock" />
+      <input type="radio" name="rps" id="rock-paper" />
+      <input type="radio" name="rps" id="rock-scissors" />
+      <input type="radio" name="rps" id="paper-rock" />
+      <input type="radio" name="rps" id="paper-paper" />
+      <input type="radio" name="rps" id="paper-scissors" />
+      <input type="radio" name="rps" id="scissors-rock" />
+      <input type="radio" name="rps" id="scissors-paper" />
+      <input type="radio" name="rps" id="scissors-scissors" />
 
       <div id="game" class="game">
         <div>
@@ -27,13 +33,28 @@
         </div>
       </div>
 
+      <p>Pick an option</p>
       <div id="choices">
-        <p>Pick an option</p>
-        <label for="rock">✊</label>
-        <label for="paper">🖐️</label>
-        <label for="scissors">✌️</label>
+        <div>
+          <label for="rock-rock">✊</label>
+          <label for="rock-paper">✊</label>
+          <label for="rock-scissors">✊</label>
+        </div>
+
+        <div>
+          <label for="paper-rock">🖐️</label>
+          <label for="paper-paper">🖐️</label>
+          <label for="paper-scissors">🖐️</label>
+        </div>
+
+        <div>
+          <label for="scissors-rock">✌️</label>
+          <label for="scissors-paper">✌️</label>
+          <label for="scissors-scissors">✌️</label>
+        </div>
       </div>
 
+      <div id="result"></div>
       <button type="reset">Play again</button>
     </form>
   </body>
