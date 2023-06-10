@@ -8,8 +8,12 @@
     <link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon" />
   </head>
   <body>
+    <!-- Main Heading -->
     <h1>Rock Paper Scissors with CSS</h1>
+
+    <!-- The Game Form -->
     <form>
+      <!-- Individual combination radio buttons for selection -->
       <input type="radio" name="rps" id="rock-rock" />
       <input type="radio" name="rps" id="rock-paper" />
       <input type="radio" name="rps" id="rock-scissors" />
@@ -20,7 +24,9 @@
       <input type="radio" name="rps" id="scissors-paper" />
       <input type="radio" name="rps" id="scissors-scissors" />
 
+      <!-- Game Container -->
       <div id="game" class="game">
+        <!-- Player's Choice -->
         <div>
           <h2>You</h2>
           <div id="your-choice"></div>
@@ -28,6 +34,7 @@
 
         <div class="vs">Vs</div>
 
+        <!-- Computer's Choice -->
         <div>
           <h2>Computer</h2>
           <div id="computer-choice"></div>
@@ -35,6 +42,8 @@
       </div>
 
       <p>Pick an option</p>
+
+      <!-- Option Picker from combination of choices -->
       <div id="choices">
         <div>
           <label for="rock-rock">✊</label>
@@ -55,6 +64,7 @@
         </div>
       </div>
 
+      <!-- Result and reset button -->
       <div id="result"></div>
       <button type="reset">Play again</button>
     </form>

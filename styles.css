@@ -47,7 +47,7 @@ label {
   cursor: pointer;
 }
 
-/** Player Choices **/
+/* Player Choices */
 #rock-rock:checked ~ #game #your-choice:before,
 #rock-paper:checked ~ #game #your-choice:before,
 #rock-scissors:checked ~ #game #your-choice:before {
@@ -66,7 +66,7 @@ label {
   content: "✌️";
 }
 
-/** Computer Choices **/
+/* Computer Choices */
 #paper-rock:checked ~ #game #computer-choice:before,
 #scissors-rock:checked ~ #game #computer-choice:before,
 #rock-rock:checked ~ #game #computer-choice:before {
@@ -100,12 +100,14 @@ label {
   line-height: 3rem;
 }
 
+/* Randomize Logic using animation */
 label {
   position: absolute;
   inset: 0;
   animation: loop 0.5s infinite;
 }
 
+/* Add animation delay */
 label:nth-of-type(1) {
   animation-delay: 0s;
 }
@@ -118,6 +120,7 @@ label:nth-of-type(3) {
   animation-delay: 0.25s;
 }
 
+/* Animation */
 @keyframes loop {
   from {
     z-index: 1;
@@ -146,11 +149,13 @@ button {
   padding: 1rem;
 }
 
+/* Hide Results till selection */
 input[type="radio"]:checked ~ button,
 input[type="radio"]:checked ~ #result {
   display: block;
 }
 
+/* Tie Case */
 #rock-rock:checked ~ #result::before,
 #paper-paper:checked ~ #result::before,
 #scissors-scissors:checked ~ #result::before {
@@ -158,6 +163,7 @@ input[type="radio"]:checked ~ #result {
   color: blue;
 }
 
+/* Win Case */
 #rock-scissors:checked ~ #result::before,
 #paper-rock:checked ~ #result::before,
 #scissors-paper:checked ~ #result::before {
@@ -165,6 +171,7 @@ input[type="radio"]:checked ~ #result {
   color: green;
 }
 
+/* Lose Case */
 #rock-paper:checked ~ #result::before,
 #paper-scissors:checked ~ #result::before,
 #scissors-rock:checked ~ #result::before {
