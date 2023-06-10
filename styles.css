@@ -10,6 +10,17 @@ h1 {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+h2 {
+  color: #999;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.vs {
+  font-size: 3rem;
+  color: maroon;
+}
+
 #game {
   display: flex;
   justify-content: center;
@@ -29,6 +40,11 @@ h1 {
 
 label {
   font-size: 2rem;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
 }
 
 /** Player Choices **/
@@ -87,7 +103,7 @@ label {
 label {
   position: absolute;
   inset: 0;
-  animation: loop 0.3s infinite;
+  animation: loop 0.5s infinite;
 }
 
 label:nth-of-type(1) {
@@ -95,11 +111,11 @@ label:nth-of-type(1) {
 }
 
 label:nth-of-type(2) {
-  animation-delay: 0.1s;
+  animation-delay: 0.125s;
 }
 
 label:nth-of-type(3) {
-  animation-delay: 0.2s;
+  animation-delay: 0.25s;
 }
 
 @keyframes loop {
@@ -139,23 +155,30 @@ input[type="radio"]:checked ~ #result {
 #paper-paper:checked ~ #result::before,
 #scissors-scissors:checked ~ #result::before {
   content: "It's a tie";
-  color: darkblue;
+  color: blue;
 }
 
 #rock-scissors:checked ~ #result::before,
 #paper-rock:checked ~ #result::before,
 #scissors-paper:checked ~ #result::before {
   content: "You win! 😊";
-  color: darkgreen;
+  color: green;
 }
 
 #rock-paper:checked ~ #result::before,
 #paper-scissors:checked ~ #result::before,
 #scissors-rock:checked ~ #result::before {
   content: "You lose 🙁";
-  color: darkred;
+  color: red;
 }
 
 input[type="radio"] {
   display: none;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #393646;
+  }
 }
